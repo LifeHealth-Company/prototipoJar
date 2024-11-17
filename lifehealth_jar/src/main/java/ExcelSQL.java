@@ -9,13 +9,12 @@ public class ExcelSQL {
     private static final int LINHAS_POR_EXECUCAO = 100;
     private static final String CONTADOR_ARQUIVO = "contador.txt"; // Onde sera armazenado a ultima linha lida pelo for
     private static final String BUCKET_NAME = "lifehealth-bucket"; // Nome do bucket
-    private static final String FILE_KEY = "amapa.xlsx";
-    // Nome do arquivo no bucket
+    private static final String FILE_KEY = "lifeHealthBase_V1.xlsx"; // Nome do arquivo no bucket
 
     public static void main(String[] args) {
-        String urlMySQL = "jdbc:mysql://localhost:3306/lifeHealth";
-        String usuario = "root";
-        String senha = "urubu100";
+        String urlMySQL = "jdbc:mysql://3.86.163.50:3306/lifeHealth";
+        String usuario = "admUser";
+        String senha = "lifeHealth123";
 
         // Instanciando o S3Provider
         S3Provider s3Provider = new S3Provider();
@@ -35,13 +34,13 @@ public class ExcelSQL {
             System.out.println("INFO - Iniciando a inserção de dados...");
             System.out.println("Aguarde, Isso pode durar alguns segundos.");
 
-            for (int i = ultimaLinhaLida + 1; i < ultimaLinhaLida + 1 + LINHAS_POR_EXECUCAO; i++) {
-                if (i > tabela.getLastRowNum()) {
+            for (int linhaAtual = ultimaLinhaLida + 1; linhaAtual < ultimaLinhaLida + 1 + LINHAS_POR_EXECUCAO; linhaAtual++) {
+                if (linhaAtual > tabela.getLastRowNum()) {
                     System.out.println("Não há mais linhas para processar.");
                     break;
                 }
-                Row linha = tabela.getRow(i);
-                System.out.println("INFO - Inserindo linha " + (i + 1) + " do arquivo Excel ao Banco de Dados");
+                Row linha = tabela.getRow(linhaAtual);
+                System.out.println("INFO - Inserindo linha " + (linhaAtual + 1) + " do arquivo Excel ao Banco de Dados");
 
                 // Campos da Tabela Matriz
                 Integer ano = getCellValueAsInteger(linha.getCell(0));
@@ -51,16 +50,16 @@ public class ExcelSQL {
                 Integer anoNascPaciente = getCellValueAsInteger(linha.getCell(3));
                 String sexoPaciente = getCellValueAsString(linha.getCell(4));
                 String isPacienteGestante = getCellValueAsString(linha.getCell(5));
-                String dataInternacao = getCellValueAsString(linha.getCell(6));
+//                String dataInternacao = getCellValueAsString(linha.getCell(6));
 
                 String sorotipo = getCellValueAsString(linha.getCell(7));
                 String evolucaoCaso = getCellValueAsString(linha.getCell(8));
-                String dataObito = getCellValueAsString(linha.getCell(9));
+//                String dataObito = getCellValueAsString(linha.getCell(9));
 
                 Integer idadePaciente = 2024 - anoNascPaciente;
 
                 // Insere na tabela ConsumoDados
-                String tabelaCasos = "INSERT INTO casos (ano, ufNotificacao, estadoNotificacao, anoNascPaciente, sexoPaciente, isPacienteGestante, dataInternacao, sorotipo, evolucaoCaso, dataObito) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                String tabelaCasos = "INSERT INTO casos (ano, ufNotificacao, estadoNotificacao, anoNascPaciente, sexoPaciente, isPacienteGestante, sorotipo, evolucaoCaso) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
                 try (PreparedStatement executarCasos = conexao.prepareStatement(tabelaCasos)){
                     executarCasos.setInt(1, ano);
                     executarCasos.setString(2, ufNotificacao );
@@ -68,10 +67,10 @@ public class ExcelSQL {
                     executarCasos.setInt(4, anoNascPaciente);
                     executarCasos.setString(5, sexoPaciente);
                     executarCasos.setString(6, isPacienteGestante);
-                    executarCasos.setString(7, dataInternacao);
+//                    executarCasos.setString(7, dataInternacao);
                     executarCasos.setString(8, sorotipo);
                     executarCasos.setString(9, evolucaoCaso);
-                    executarCasos.setString(10,dataObito);
+//                    executarCasos.setString(10,dataObito);
 
                     executarCasos.executeUpdate();
                 }
