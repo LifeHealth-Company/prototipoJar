@@ -9,12 +9,12 @@ public class ExcelSQL {
     private static final int LINHAS_POR_EXECUCAO = 100;
     private static final String CONTADOR_ARQUIVO = "contador.txt"; // Onde sera armazenado a ultima linha lida pelo for
     private static final String BUCKET_NAME = "lifehealth-bucket"; // Nome do bucket
-    private static final String FILE_KEY = "lifeHealthBase_V1.xlsx"; // Nome do arquivo no bucket
+    private static final String FILE_KEY = "lifeHealthBase.xlsx"; // Nome do arquivo no bucket
 
     public static void main(String[] args) {
-        String urlMySQL = "jdbc:mysql://3.86.163.50:3306/lifeHealth";
-        String usuario = "admUser";
-        String senha = "lifeHealth123";
+        String urlMySQL = System.getenv("MYSQL_URL");
+        String usuario = System.getenv("MYSQL_USER");
+        String senha = System.getenv("MYSQL_PASSWORD");
 
         // Instanciando o S3Provider
         S3Provider s3Provider = new S3Provider();
@@ -46,15 +46,11 @@ public class ExcelSQL {
                 Integer ano = getCellValueAsInteger(linha.getCell(0));
                 String ufNotificacao = getCellValueAsString(linha.getCell(1));
                 String estadoNotificacao = getCellValueAsString(linha.getCell(2));
-
                 Integer anoNascPaciente = getCellValueAsInteger(linha.getCell(3));
                 String sexoPaciente = getCellValueAsString(linha.getCell(4));
                 String isPacienteGestante = getCellValueAsString(linha.getCell(5));
-//                String dataInternacao = getCellValueAsString(linha.getCell(6));
-
-                String sorotipo = getCellValueAsString(linha.getCell(7));
-                String evolucaoCaso = getCellValueAsString(linha.getCell(8));
-//                String dataObito = getCellValueAsString(linha.getCell(9));
+                String sorotipo = getCellValueAsString(linha.getCell(6));
+                String evolucaoCaso = getCellValueAsString(linha.getCell(7));
 
                 Integer idadePaciente = 2024 - anoNascPaciente;
 
@@ -67,10 +63,8 @@ public class ExcelSQL {
                     executarCasos.setInt(4, anoNascPaciente);
                     executarCasos.setString(5, sexoPaciente);
                     executarCasos.setString(6, isPacienteGestante);
-//                    executarCasos.setString(7, dataInternacao);
-                    executarCasos.setString(8, sorotipo);
-                    executarCasos.setString(9, evolucaoCaso);
-//                    executarCasos.setString(10,dataObito);
+                    executarCasos.setString(7, sorotipo);
+                    executarCasos.setString(8, evolucaoCaso);
 
                     executarCasos.executeUpdate();
                 }
