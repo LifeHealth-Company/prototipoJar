@@ -22,12 +22,11 @@ public class ExcelSQL {
 
         try {
             // Cria um FileHandler que irá gravar os logs no arquivo 'logfile.log', permitindo anexar novas entradas
-            FileHandler fileHandler = new FileHandler("logfile.log", true);  // O segundo parâmetro é para 'append' (acrescentar)
-            fileHandler.setFormatter(new SimpleFormatter());  // Define o formato simples para os logs
-            logger.addHandler(fileHandler);  // Adiciona o FileHandler ao logger
+            FileHandler fileHandler = new FileHandler("logfile.log", true);
+            fileHandler.setFormatter(new SimpleFormatter());
+            logger.addHandler(fileHandler);
 
-            // Configura o nível de log para INFO (para capturar todas as mensagens de INFO e superiores)
-            logger.setLevel(Level.ALL);  // 'ALL' captura todos os níveis de log (FINEST até SEVERE)
+            logger.setLevel(Level.ALL);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -71,6 +70,23 @@ public class ExcelSQL {
                 // Atualiza o contador
                 atualizarContador(ultimaLinhaLida + LINHAS_POR_EXECUCAO);
                 logger.info("Dados inseridos com êxito!");
+
+                try {
+                    // Caminho do arquivo de log gerado (substitua pelo caminho real)
+                    String logFilePath = "logfile.log";  // Defina o caminho do arquivo de log gerado
+
+                    // Enviar o e-mail com o arquivo de log
+                    javaMail.enviarEmailComAnexo(
+                            "gabriel.dantas@sptech.school", // Destinatário
+                            "Logs de Erro - Sistema ExcelSQL", // Assunto do e-mail
+                            "Aqui estão os logs do sistema ExcelSQL.\nConfira o arquivo .log para visualizar as informações.", // Corpo do e-mail
+                            logFilePath // Caminho do arquivo de log
+                    );
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
 
             } catch (SdkException e) { // Capturando as exceções do SDK (AWS)
                 logger.severe("Erro ao processar o arquivo Excel.");

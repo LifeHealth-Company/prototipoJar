@@ -1,0 +1,60 @@
+nov. 29, 2024 5:20:19 PM ExcelSQL main
+INFORMAÇÕES: Conexão com o banco de dados estabelecida.
+nov. 29, 2024 5:20:19 PM ExcelSQL main
+INFORMAÇÕES: Iniciando leitura do arquivo Excel.
+nov. 29, 2024 5:20:19 PM ExcelSQL baixarArquivoS3
+DETALHADO: Tentando baixar o arquivo: lifeHealthBase.xlsx do bucket: lifehealth-bucket
+nov. 29, 2024 5:20:30 PM ExcelSQL main
+INFORMAÇÕES: Iniciando a inserção de dados...
+nov. 29, 2024 5:20:45 PM ExcelSQL atualizarContador
+DETALHADO: Contador atualizado para: 100
+nov. 29, 2024 5:20:45 PM ExcelSQL main
+INFORMAÇÕES: Dados inseridos com êxito!
+nov. 29, 2024 5:31:02 PM ExcelSQL main
+INFORMAÇÕES: Conexão com o banco de dados estabelecida.
+nov. 29, 2024 5:31:02 PM ExcelSQL main
+INFORMAÇÕES: Iniciando leitura do arquivo Excel.
+nov. 29, 2024 5:31:02 PM ExcelSQL baixarArquivoS3
+DETALHADO: Tentando baixar o arquivo: lifeHealthBase.xlsx do bucket: lifehealth-bucket
+nov. 29, 2024 5:31:08 PM ExcelSQL main
+INFORMAÇÕES: Iniciando a inserção de dados...
+nov. 29, 2024 5:31:22 PM ExcelSQL atualizarContador
+DETALHADO: Contador atualizado para: 200
+nov. 29, 2024 5:31:22 PM ExcelSQL main
+INFORMAÇÕES: Dados inseridos com êxito!
+nov. 29, 2024 5:35:00 PM ExcelSQL main
+INFORMAÇÕES: Conexão com o banco de dados estabelecida.
+nov. 29, 2024 5:35:00 PM ExcelSQL main
+INFORMAÇÕES: Iniciando leitura do arquivo Excel.
+nov. 29, 2024 5:35:00 PM ExcelSQL baixarArquivoS3
+DETALHADO: Tentando baixar o arquivo: lifeHealthBase.xlsx do bucket: lifehealth-bucket
+nov. 29, 2024 5:35:05 PM ExcelSQL main
+INFORMAÇÕES: Iniciando a inserção de dados...
+nov. 29, 2024 5:35:20 PM ExcelSQL atualizarContador
+DETALHADO: Contador atualizado para: 300
+nov. 29, 2024 5:35:20 PM ExcelSQL main
+INFORMAÇÕES: Dados inseridos com êxito!
+nov. 29, 2024 5:36:09 PM ExcelSQL main
+INFORMAÇÕES: Conexão com o banco de dados estabelecida.
+nov. 29, 2024 5:36:09 PM ExcelSQL main
+INFORMAÇÕES: Iniciando leitura do arquivo Excel.
+nov. 29, 2024 5:36:09 PM ExcelSQL baixarArquivoS3
+DETALHADO: Tentando baixar o arquivo: lifeHealthBase.xlsx do bucket: lifehealth-bucket
+nov. 29, 2024 5:36:12 PM ExcelSQL main
+INFORMAÇÕES: Iniciando a inserção de dados...
+nov. 29, 2024 5:36:27 PM ExcelSQL atualizarContador
+DETALHADO: Contador atualizado para: 400
+nov. 29, 2024 5:36:27 PM ExcelSQL main
+INFORMAÇÕES: Dados inseridos com êxito!
+nov. 29, 2024 5:40:44 PM ExcelSQL main
+INFORMAÇÕES: Conexão com o banco de dados estabelecida.
+nov. 29, 2024 5:40:44 PM ExcelSQL main
+INFORMAÇÕES: Iniciando leitura do arquivo Excel.
+nov. 29, 2024 5:40:44 PM ExcelSQL baixarArquivoS3
+DETALHADO: Tentando baixar o arquivo: lifeHealthBase.xlsx do bucket: lifehealth-bucket
+nov. 29, 2024 5:40:49 PM ExcelSQL main
+INFORMAÇÕES: Iniciando a inserção de dados...
+nov. 29, 2024 5:41:03 PM ExcelSQL atualizarContador
+DETALHADO: Contador atualizado para: 500
+nov. 29, 2024 5:41:03 PM ExcelSQL main
+INFORMAÇÕES: Dados inseridos com êxito!

@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ExcelSQL" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="ALTERNATIVE_JRE_PATH" value="corretto-21" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <envs>
+      <env name="MYSQL_PASSWORD" value="lifeHealth123" />
+      <env name="MYSQL_URL" value="jdbc:mysql://44.194.80.251:3306/lifeHealth" />
+      <env name="MYSQL_USER" value="root" />
+      <env name="AWS_ACCESS_KEY_ID" value="ASIAZKEOZQE2BCDVYXBD" />
+      <env name="AWS_SECRET_ACCESS_KEY" value="I++BWR48bL73vfeFWoHGywUb2c6+jLk9xlN++FYq" />
+      <env name="AWS_SESSION_TOKEN" value="IQoJb3JpZ2luX2VjENT//////////wEaCXVzLXdlc3QtMiJHMEUCIQDhGyUy4wmFnQ+1AoECvlalYkkY/w0isAIYy0f/fky6IAIgAPABx2mAc0IMH1LpcJyp1BfRgSz4hoNh8EOdDdsw8ikquAIIfRABGgw2NDAyNDk1OTQxNjQiDJtAkjICehGZo6Rj0yqVAsPq1M4g6554ZQ+cEAu3TyIOr8qY/+/UYuV2RGy9TMKGgDeD1Uo1xipBVqHI/szvrkJT6pyDL0wXuuLG/gpSIBkmwAFXNtMuKXU1zBeM+CDxucdmAZMY6wUKSV1mvSMIm7dWmnNkzeEiJ1E1b7lxFJpbL+Y8Svh4Mvkb+XfRfwAkrbmIArKdAj3MZB4TdZ6Zi8IdDid3ocmEsb5cKkpUudzeW3fpzkqeVLGtzXj0tCTvg8GF9ue+XiP2JWaDx7DB+jKmLQQKQmsj2lVhR+xe9dORf5pmFeaNqlNwIiRQ5dSlzzBl4mzfC7e+YgNHres4oVeYvl8mpZAswfeZauu2+EpmwvZK0m8VGTcHnFVeGM/M9RovA4Uw6MCougY6nQGafsXDM+Lxr2tXmxES+rELgilQEtM+0HWcbZjf2W66aOd03JH+vEvimsTNPM1FfkTB2nOSe90l8kfYmY2mdlLKKjZDQummIAOjWNw+6oKGCX5coUcPJGCqE40h63BewPV8DLS/L4bv5ZKr6Zvl0gxYFMexKu/1scNkD4bikAsE59SZzR+Qn+CXmHI9GZm4Yp6cQor254zQhae1iIdx" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="ExcelSQL" />
+    <module name="PrototipoJar" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

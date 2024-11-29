@@ -4,12 +4,13 @@ import java.io.*;
 import java.util.*;
 import javax.activation.*;
 
-public class javaMail{
+public class javaMail {
 
-    public static void main(String[] args) {
-        
-        final String d_email = System.getenv("USER_EMAIL");
-        final String d_password = System.getenv("USER_EMAIL_PASSWORD");
+    // Método para enviar o e-mail com anexo
+    public static void enviarEmailComAnexo(String destinatario, String assunto, String mensagem, String logFilePath) throws MessagingException, IOException {
+
+        final String d_email = ("mauricio.almeida@sptech.school");
+        final String d_password = ("Maumau2000@");
 
         Properties props = new Properties();
         props.put("mail.smtp.user", d_email);
@@ -30,17 +31,17 @@ public class javaMail{
 
             // Criando a mensagem
             MimeMessage msg = new MimeMessage(session);
-            msg.setSubject("Logs de Erro - Sistema ExcelSQL");  // Assunto do e-mail
+            msg.setSubject(assunto);  // Usando o assunto do parâmetro
             msg.setFrom(new InternetAddress(d_email));  // E-mail de envio
-            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("mauriciom.almeida0@gmail.com"));  // E-mail de destino
+            msg.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario));  // E-mail de destino
 
             // Criando o corpo do e-mail
             MimeBodyPart textPart = new MimeBodyPart();
-            textPart.setText("Aqui estão os logs de erro do sistema ExcelSQL.");
+            textPart.setText(mensagem); // Corpo do e-mail vindo do parâmetro
 
             // Criando o anexo (arquivo de log)
             MimeBodyPart attachmentPart = new MimeBodyPart();
-            FileDataSource source = new FileDataSource("logfile.log");  // Caminho do arquivo de log
+            FileDataSource source = new FileDataSource(logFilePath);  // Caminho do arquivo de log
             attachmentPart.setDataHandler(new DataHandler(source));
             attachmentPart.setFileName("logfile.log");
 
