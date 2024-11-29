@@ -7,7 +7,7 @@ import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.core.exception.SdkException;
 
 public class ExcelSQL {
-    private static final int LINHAS_POR_EXECUCAO = 100;
+    private static final int LINHAS_POR_EXECUCAO = 60000;
     private static final String CONTADOR_ARQUIVO = "contador.txt";
     private static final String BUCKET_NAME = "lifehealth-bucket";
     private static final String FILE_KEY = "lifeHealthBase.xlsx";
