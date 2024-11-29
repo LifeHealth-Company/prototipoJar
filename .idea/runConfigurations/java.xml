@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="java" type="Application" factoryName="Application">
+    <envs>
+      <env name="USER_EMAIL" value="mauricio.almeida@sptech.school" />
+      <env name="USER_EMAIL_PASSWORD" value="Maumau2000@" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="javaMail" />
+    <module name="NexFlow" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
