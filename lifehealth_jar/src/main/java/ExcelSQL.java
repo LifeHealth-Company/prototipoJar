@@ -77,7 +77,7 @@ public class ExcelSQL {
 
                     // Enviar o e-mail com o arquivo de log
                     javaMail.enviarEmailComAnexo(
-                            "gabriel.dantas@sptech.school", // Destinatário
+                            "mauricio.almeida@sptech.school", // Destinatário
                             "Logs de Erro - Sistema ExcelSQL", // Assunto do e-mail
                             "Aqui estão os logs do sistema ExcelSQL.\nConfira o arquivo .log para visualizar as informações.", // Corpo do e-mail
                             logFilePath // Caminho do arquivo de log

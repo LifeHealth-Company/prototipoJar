@@ -3,12 +3,12 @@
     <option name="ALTERNATIVE_JRE_PATH" value="corretto-21" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <envs>
+      <env name="AWS_ACCESS_KEY_ID" value="ASIAZKEOZQE2ML5F2ST7" />
+      <env name="AWS_SECRET_ACCESS_KEY" value="esDzFCeGJKlimP+Po5JQ1ynC6PkW3d0+rnrJtLXZ" />
+      <env name="AWS_SESSION_TOKEN" value="IQoJb3JpZ2luX2VjEOT//////////wEaCXVzLXdlc3QtMiJGMEQCICoj4p/xdc0J59fOpUZop51U2SfDiGEY6YOId8W3G6wWAiBZMzWCbuNi/ZY4xkY7d4QG54AXKIyp5qqzoUmQmrPplSrBAgiN//////////8BEAEaDDY0MDI0OTU5NDE2NCIMORJp+U94VhzNGltwKpUCUwXs6qzt9OjbPRfC8x3ndULxjpv7VgYQM+3kJsDJrqcC+pqO7ec/maXf+/7xmQLXWIZJFQ1Egq6Zd8dFGV2symP1joS9fPTJHRVgeEuOmmuOsk+86MJ8cdtsqZ6W2rg4Qu0r2vNsrLrzNk1wh1bkzICGIEfKX1xrUoTfJkmInl8IDh6Nvk4jvITLAVxDAZL+gJ5eKS3vdLTjizbBGCCzSRPlc1Ize/Imr1HRGR5xZV2YrtnRWlv6n8KywAyEjra29mUyLlbgkumQVlp4MAgc9GNqVZoQZPibCkmsPGBWZOus6d0vtm5MfEtYP2MlC2NWcUowI8DNosnGsWg0HzQGudwbCztezQKtMXMvggd7Ki1QOEQftDC37qu6BjqeARh4EtBTPrqhmfO3OOemeVajbZ8hfFRfkjSFkmXSuGlpdXk9jnTosQEew5fWhXHd8t2oHIfflR1WEzVpoYi0Agp8fvBgbEwoFDC8RzQgoSx3Uco1JKElQY1O3bUoQ9X0TnI5/RFCwGuaTCNYl//cXaK2cGGaRRSTXJiO35vq+ijGUp+ynMiA+cng9fVK2DG2z4eQX4kfKjEW52lOzx7P" />
       <env name="MYSQL_PASSWORD" value="lifeHealth123" />
       <env name="MYSQL_URL" value="jdbc:mysql://44.194.80.251:3306/lifeHealth" />
       <env name="MYSQL_USER" value="root" />
-      <env name="AWS_ACCESS_KEY_ID" value="ASIAZKEOZQE2BCDVYXBD" />
-      <env name="AWS_SECRET_ACCESS_KEY" value="I++BWR48bL73vfeFWoHGywUb2c6+jLk9xlN++FYq" />
-      <env name="AWS_SESSION_TOKEN" value="IQoJb3JpZ2luX2VjENT//////////wEaCXVzLXdlc3QtMiJHMEUCIQDhGyUy4wmFnQ+1AoECvlalYkkY/w0isAIYy0f/fky6IAIgAPABx2mAc0IMH1LpcJyp1BfRgSz4hoNh8EOdDdsw8ikquAIIfRABGgw2NDAyNDk1OTQxNjQiDJtAkjICehGZo6Rj0yqVAsPq1M4g6554ZQ+cEAu3TyIOr8qY/+/UYuV2RGy9TMKGgDeD1Uo1xipBVqHI/szvrkJT6pyDL0wXuuLG/gpSIBkmwAFXNtMuKXU1zBeM+CDxucdmAZMY6wUKSV1mvSMIm7dWmnNkzeEiJ1E1b7lxFJpbL+Y8Svh4Mvkb+XfRfwAkrbmIArKdAj3MZB4TdZ6Zi8IdDid3ocmEsb5cKkpUudzeW3fpzkqeVLGtzXj0tCTvg8GF9ue+XiP2JWaDx7DB+jKmLQQKQmsj2lVhR+xe9dORf5pmFeaNqlNwIiRQ5dSlzzBl4mzfC7e+YgNHres4oVeYvl8mpZAswfeZauu2+EpmwvZK0m8VGTcHnFVeGM/M9RovA4Uw6MCougY6nQGafsXDM+Lxr2tXmxES+rELgilQEtM+0HWcbZjf2W66aOd03JH+vEvimsTNPM1FfkTB2nOSe90l8kfYmY2mdlLKKjZDQummIAOjWNw+6oKGCX5coUcPJGCqE40h63BewPV8DLS/L4bv5ZKr6Zvl0gxYFMexKu/1scNkD4bikAsE59SZzR+Qn+CXmHI9GZm4Yp6cQor254zQhae1iIdx" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="ExcelSQL" />
     <module name="PrototipoJar" />
